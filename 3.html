@@ -8,52 +8,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
+        html,
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(59, 59, 59);
+            height: 100%;
+            margin: 0;
+        }
+
         .table {
             border-collapse: collapse;
+            background-color: white;
             border: 1px solid black;
             font-size: 18px;
+            width: 100%;
         }
 
         .table tr {
             border-bottom: 1px solid black;
         }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+        }
+
+        .search-input-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 3vh;
+        }
+
+        .phrase-input {
+            width: 23vw;
+        }
     </style>
 </head>
 
 <body>
-    <input class="phrase-input"><button class="search-btn">SEARCH</button>
-    <table class="table">
-        <tr>
-            <td>Walmart</td>
-        </tr>
-        <tr>
-            <td>State Grid</td>
-        </tr>
-        <tr>
-            <td>Sinopec Group</td>
-        </tr>
-        <tr>
-            <td>China National Potroleum</td>
-        </tr>
-        <tr>
-            <td>Royal Dutch Shell</td>
-        </tr>
-        <tr>
-            <td>Toyota Motor</td>
-        </tr>
-        <tr>
-            <td>Volkswagen</td>
-        </tr>
-        <tr>
-            <td>BP</td>
-        </tr>
-        <tr>
-            <td>Exxon Mobil</td>
-        </tr>
-        <tr>
-            <td>Berkshire Hathaway</td>
-        </tr>
-    </table>
+    <div class="page-wrapper">
+        <div class="search-input-wrapper">
+            <input class="phrase-input" placeholder="Search..."><button class="search-btn">SEARCH</button>
+        </div>
+        <table class="table">
+            <tr>
+                <td>Walmart</td>
+            </tr>
+            <tr>
+                <td>State Grid</td>
+            </tr>
+            <tr>
+                <td>Sinopec Group</td>
+            </tr>
+            <tr>
+                <td>China National Potroleum</td>
+            </tr>
+            <tr>
+                <td>Royal Dutch Shell</td>
+            </tr>
+            <tr>
+                <td>Toyota Motor</td>
+            </tr>
+            <tr>
+                <td>Volkswagen</td>
+            </tr>
+            <tr>
+                <td>BP</td>
+            </tr>
+            <tr>
+                <td>Exxon Mobil</td>
+            </tr>
+            <tr>
+                <td>Berkshire Hathaway</td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
