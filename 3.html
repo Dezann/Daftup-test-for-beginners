@@ -27,6 +27,7 @@
         }
 
         .table tr {
+            height: 5vh;
             border-bottom: 1px solid black;
         }
 
@@ -46,6 +47,11 @@
         }
 
         .phrase-input {
+            height: 4vh;
+            border: none;
+            outline: none;
+            padding-left: 3vh;
+            border-radius: 2vh;
             width: 23vw;
         }
     </style>
@@ -54,7 +60,7 @@
 <body>
     <div class="page-wrapper">
         <div class="search-input-wrapper">
-            <input class="phrase-input" placeholder="Search..." onkeyup=searchFunction()>
+            <input class="phrase-input" placeholder="Search...">
             <button class="search-btn" onclick=searchFunction()>SEARCH</button>
         </div>
         <table class="table">
@@ -92,14 +98,17 @@
     </div>
     <script>
         let searchFunction = () => {
-            let input = document.getElementsByClassName("phrase-input")[0].value
+            let input = document.getElementsByClassName("phrase-input")[0].value.toUpperCase()
             let table = document.getElementsByClassName("table")[0];
             let tr = table.getElementsByTagName("tr");
 
             for (let i = 0; i < tr.length; i++) {
                 td = tr[i].getElementsByTagName('td')[0]
-                console.log(td.innerHTML)
+                if (td.innerHTML.toUpperCase().includes(input)) {
+                    console.log(td.innerHTML)
+                }
             }
+
         }
     </script>
 </body>
