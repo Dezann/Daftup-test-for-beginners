@@ -54,7 +54,8 @@
 <body>
     <div class="page-wrapper">
         <div class="search-input-wrapper">
-            <input class="phrase-input" placeholder="Search..."><button class="search-btn">SEARCH</button>
+            <input class="phrase-input" placeholder="Search..." onkeyup=searchFunction()>
+            <button class="search-btn" onclick=searchFunction()>SEARCH</button>
         </div>
         <table class="table">
             <tr>
@@ -89,6 +90,18 @@
             </tr>
         </table>
     </div>
+    <script>
+        let searchFunction = () => {
+            let input = document.getElementsByClassName("phrase-input")[0].value
+            let table = document.getElementsByClassName("table")[0];
+            let tr = table.getElementsByTagName("tr");
+
+            for (let i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName('td')[0]
+                console.log(td.innerHTML)
+            }
+        }
+    </script>
 </body>
 
 </html>
