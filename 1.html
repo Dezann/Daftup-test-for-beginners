@@ -37,6 +37,20 @@
             grid-row: 2/4;
             background-color: #6c757D;
         }
+
+        @media screen and (max-width: 600px) {
+            .grid-container {
+                grid-template-rows: 100px 270px 100px 100px 100px 100px 100px 100px;
+            }
+
+            * {
+                grid-column: 1/5;
+            }
+
+            .sidebar {
+                grid-row: 2/2;
+            }
+        }
     </style>
 </head>
 
